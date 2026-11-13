@@ -22,8 +22,10 @@ if uploaded_file is None:
     st.info("Upload your cleaned CSV file to start.")
     st.stop()
 
+
 df = pd.read_csv(uploaded_file)
 df["date"] = pd.to_datetime(df["date"])
+
 
 st.success("File uploaded successfully")
 
